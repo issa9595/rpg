@@ -13,6 +13,19 @@ const generateImage = async () => {
   // TODO : Find a free API for generate picture
 }
 
+const generateText = async (prompt) => {
+  const response = await ai.models.generateContent({
+    model: 'gemini-2.0-flash',
+    config: {
+      responseMimeType: 'application/json'
+    },
+    contents: prompt
+  })
+    console.log(response?.candidates[0]?.content?.parts[0]?.text)
+}
+
+
 module.exports = {
-  generateImage
+  generateImage,
+  generateText
 }

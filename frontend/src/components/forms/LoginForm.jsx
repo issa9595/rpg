@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Input from './inputs/Input'
-import Button from '../button'
+import Button from '../Button'
 
 function LoginForm ({ onSubmit }) {
   const [credentials, setCredentials] = useState({
-    identifier: 'issamadayev@gmail.com',
-    password: 'password'
+    identifier: '',
+    password: ''
   })
 
   const handleSubmit = (event) => {

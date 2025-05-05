@@ -1,6 +1,6 @@
 import { strapiCreateGame } from '../../api/strapi'
 import { useAuth } from '../../contexts/AuthContext'
-import Button from '../button'
+import Button from '../Button'
 
 function NewGameSection () {
   const { state: { user: { id } } } = useAuth()

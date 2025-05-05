@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import Input from './inputs/Input'
-import Button from '../button'
+import Button from '../Button'
 
 function RegisterForm ({ onSubmit }) {
   const [data, setData] = useState({
-    email: 'issamadayev@gmail.com',
-    username: 'issamaa',
-    password: 'password'
+    email: '',
+    username: '',
+    password: ''
   })
 
   const handleSubmit = (event) => {

@@ -91,6 +91,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "players": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::player.player",
+      "mappedBy": "user"
     }
   }
 }

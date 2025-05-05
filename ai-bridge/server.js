@@ -3,6 +3,7 @@ const helmet = require('helmet')
 const cors = require('cors')
 const morgan = require('morgan')
 
+// Gestion du .env
 require('dotenv').config()
 
 const PORT = process.env.PORT || 4000
@@ -15,15 +16,13 @@ app.use(cors())
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
-  res.send('AI Bridge API')
-}
-)
+  res.send('COUCOU !')
+})
 
 // ROUTES
-
-app.use('/api/generate-avatar', require('./routes/generate-avatar'))
+app.use('/generate-avatar', require('./routes/generate-avatar'))
+app.use('/generate-player', require('./routes/generate-player'))
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
-}
-)
+})
