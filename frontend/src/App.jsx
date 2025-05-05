@@ -1,8 +1,24 @@
+import { BrowserRouter } from 'react-router'
+import MainRouter from './navigation/MainRouter'
+import AuthRouter from './navigation/AuthRouter'
+import GlobalLayout from './layouts/GlobalLayout'
+import { ToastContainer } from 'react-toastify'
+import { useAuth } from './contexts/AuthContext'
+
 function App () {
+  const { state: { isLoggedIn } } = useAuth()
+
   return (
-    <h1 className='text-xl text-center'>
-      Hello world !
-    </h1>
+    <BrowserRouter>
+      <GlobalLayout>
+        {
+          isLoggedIn
+            ? <MainRouter />
+            : <AuthRouter />
+        }
+        <ToastContainer />
+      </GlobalLayout>
+    </BrowserRouter>
   )
 }
 

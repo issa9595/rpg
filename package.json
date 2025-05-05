@@ -5,9 +5,13 @@
   "repository": "git@github.com:issa9595/rpg.git",
   "author": "Issa EDGCO <issa@edgco.fr>",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "init": "cd frontend/ && yarn && cd ../backend/ && yarn",
     "dev:front": "cd frontend/ && yarn dev",
     "dev:back": "cd backend/ && yarn dev"
-  }
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "dependencies": {}
 }
